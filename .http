@@ -1,0 +1,8 @@
+### Films list
+GET https://swapi.thehiveresistance.com/api/films/
+
+### Films search
+GET https://swapi.thehiveresistance.com/api/films/?search=jedi
+
+### Film by id
+GET https://swapi.thehiveresistance.com/api/films/1
