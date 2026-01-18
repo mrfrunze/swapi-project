@@ -1,0 +1,664 @@
+{
+	"info": {
+		"_postman_id": "d5507dbe-de72-4c25-98f4-a936ca9d5b0b",
+		"name": "SWAPI (prod)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "542474"
+	},
+	"item": [
+		{
+			"name": "films",
+			"item": [
+				{
+					"name": "/films/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/films/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"films",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/films/?search=jedi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/films/?search=jedi",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"films",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "jedi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/films/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/films/1",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"films",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "people",
+			"item": [
+				{
+					"name": "/people/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/people/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"people",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/people?page=2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/people?page=2",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"people"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/people/?search=b",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/people/?search=b",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"people",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/people/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/people/1",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"people",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "planets",
+			"item": [
+				{
+					"name": "/planets/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/planets/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"planets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/planets/?page=2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/planets/?page=2",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"planets",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/planets/?search=da",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/planets/?search=da",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"planets",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "da"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/planets/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/planets/1",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"planets",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "species",
+			"item": [
+				{
+					"name": "/species/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/species/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"species",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/species/?page=2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/species/?page=2",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"species",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/species/?search=an",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/species/?search=an",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"species",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "an"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/species?search=an&page=2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/species/?search=an&page=2",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"species",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "an"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/species/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/species/1",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"species",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "starships",
+			"item": [
+				{
+					"name": "/starships/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/starships/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"starships",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/starships/?page=2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/starships/?page=2",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"starships",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/starships/?search=wing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/starships/?search=wing",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"starships",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "wing"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/starships/10",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/starships/10",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"starships",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vehicles",
+			"item": [
+				{
+					"name": "/vehicles/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/vehicles/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"vehicles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/vehicles/?page=2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/vehicles/?page=2",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"vehicles",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/vehicles/?search=tie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/vehicles/?search=tie",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"vehicles",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "tie"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/vehicles/14",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.thehiveresistance.com/api/vehicles/14",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"thehiveresistance",
+								"com"
+							],
+							"path": [
+								"api",
+								"vehicles",
+								"14"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.thehiveresistance.com/api/",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"thehiveresistance",
+						"com"
+					],
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
