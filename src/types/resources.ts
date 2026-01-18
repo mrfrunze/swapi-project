@@ -1,5 +1,9 @@
-import { Person } from "./people";
-import { Film } from "./film";
+import type { Film } from "./film";
+import type { Person } from "./people";
+import type { Planet } from "./planet";
+import type { Species } from "./species";
+import type { Starship } from "./starship";
+import type { Vehicle } from "./vehicle";
 
 export type ResourceType =
   | "people"
@@ -12,8 +16,8 @@ export type ResourceType =
 export type ResourceMap = {
   people: Person;
   films: Film;
-  planets: unknown;
-  species: unknown;
-  starships: unknown;
-  vehicles: unknown;
+  planets: Planet;
+  species: Species;
+  starships: Starship;
+  vehicles: Vehicle;
 };
