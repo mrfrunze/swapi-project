@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import type { Person } from "../types/people";
 import { ResourceListPage } from "./ResourceListPage";
 
@@ -9,9 +9,14 @@ export function PeoplePage() {
         <ResourceListPage<Person>
             resource="people"
             renderItem={(p) => (
-                <div key={p.id} className="border p-3 rounded">
+                <Link
+                    to={`/people/${p.id}`}
+                    key={p.id}
+                    className="border p-3 rounded block hover:bg-gray-50"
+                >
                     {p.name}
-                </div>
+                </Link>
+
             )}
         />
     )
