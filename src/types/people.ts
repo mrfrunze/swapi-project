@@ -1,6 +1,7 @@
 import type { BaseResource } from "./base";
 
 export interface Person extends BaseResource {
+  id: number;
   name: string;
   birth_year: string;
   eye_color: string;
