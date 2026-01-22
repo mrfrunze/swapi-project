@@ -17,15 +17,28 @@ export function ResourceListPage<T>({ resource, renderItem }: Props<T>) {
     const [count, setCount] = useState(0);
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
+   useEffect(() => {
+    let active = true;
+
+    async function load() {
         setLoading(true);
-        getList<T>(resource, { page, search: query })
-            .then((res) => {
-                setItems(res.results);
-                setCount(res.count);
-            })
-            .finally(() => setLoading(false));
-    }, [resource, page, query]);
+        try {
+            const res = await getList<T>(resource, { page, search: query });
+            if (!active) return;
+            setItems(res.results);
+            setCount(res.count);
+        } finally {
+            if (active) setLoading(false);
+        }
+    }
+
+    load();
+
+    return () => {
+        active = false;
+    };
+}, [resource, page, query]);
+
 
     if (loading) return <div className="p-4">Loading…</div>;
 

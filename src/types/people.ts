@@ -10,9 +10,9 @@ export interface Person extends BaseResource {
   mass: string;
   skin_color: string;
 
-  homeworld: string;
-  films: string[];
-  species: string[];
-  starships: string[];
-  vehicles: string[];
+  homeworld: { id: number; name: string };
+  films: Array<{ id: number; title: string }>;
+  species: Array<{ id: number; name: string }>;
+  starships: Array<{ id: number; name: string }>;
+  vehicles: Array<{ id: number; name: string }>;
 }

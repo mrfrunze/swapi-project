@@ -1,6 +1,10 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { PeoplePage } from "./pages/PeoplePage";
 import { PersonDetailPage } from "./pages/PersonDetailPage";
+import { FilmDetailPage } from "./pages/FilmDetailPage";
+import { PlanetDetailPage } from "./pages/PlanetDetailPage";
+import { FilmsPage } from "./pages/FilmsPage";
+import { PlanetsPage } from "./pages/PlanetsPage";
 
 function App() {
 
@@ -8,9 +12,12 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Navigate to="/people" replace />} />
-        <Route path="/people" element={<PeoplePage/>} />
+        <Route path="/people" element={<PeoplePage />} />
         <Route path="/people/:id" element={<PersonDetailPage />} />
-        <Route path="/films" element={<div className="p-4">Films page</div>} />
+        <Route path="/films" element={<FilmsPage />} />
+        <Route path="/films/:id" element={<FilmDetailPage />} />
+        <Route path="/planets" element={<PlanetsPage />} />
+        <Route path="/planets/:id" element={<PlanetDetailPage />} />
       </Routes>
     </>
   )
