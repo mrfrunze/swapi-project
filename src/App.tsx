@@ -5,19 +5,23 @@ import { FilmDetailPage } from "./pages/FilmDetailPage";
 import { PlanetDetailPage } from "./pages/PlanetDetailPage";
 import { FilmsPage } from "./pages/FilmsPage";
 import { PlanetsPage } from "./pages/PlanetsPage";
+import { Layout } from "./layouts/Layout";
 
 function App() {
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<Navigate to="/people" replace />} />
-        <Route path="/people" element={<PeoplePage />} />
-        <Route path="/people/:id" element={<PersonDetailPage />} />
-        <Route path="/films" element={<FilmsPage />} />
-        <Route path="/films/:id" element={<FilmDetailPage />} />
-        <Route path="/planets" element={<PlanetsPage />} />
-        <Route path="/planets/:id" element={<PlanetDetailPage />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Navigate to="/people" replace />} />
+          <Route path="/people" element={<PeoplePage />} />
+          <Route path="/people/:id" element={<PersonDetailPage />} />
+          <Route path="/films" element={<FilmsPage />} />
+          <Route path="/films/:id" element={<FilmDetailPage />} />
+          <Route path="/planets" element={<PlanetsPage />} />
+          <Route path="/planets/:id" element={<PlanetDetailPage />} />
+        </Route>
+
       </Routes>
     </>
   )
