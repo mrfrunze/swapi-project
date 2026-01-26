@@ -50,10 +50,11 @@ export function ResourceListPage<T>({ resource, renderItem }: Props<T>) {
     }, [resource, page, query]);
 
 
-    if (loading) return <div className="p-4">Loading…</div>;
+    
 
     return (
         <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-4">
+            {loading && <div className="p-4">Loading…</div>}
             <div >
                 <form
                     className="flex items-center border rounded overflow-hidden"
