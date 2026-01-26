@@ -23,7 +23,7 @@ export function Header() {
         <header className="border-b bg-white sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 h-14 flex justify-between items-center">
                 {/* Logo left */}
-                <NavLink to="/people" className="font-bold text-lg">
+                <NavLink to="/films" className="font-bold text-lg">
                     Star Wars Encyclopedia
                 </NavLink>
 

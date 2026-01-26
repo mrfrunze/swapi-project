@@ -15,7 +15,7 @@ function App() {
     <>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Navigate to="/people" replace />} />
+          <Route path="/" element={<Navigate to="/films" replace />} />
           <Route path="/people" element={<PeoplePage />} />
           <Route path="/people/:id" element={<ResourceDetailPage resource="people" />} />
           <Route path="/films" element={<FilmsPage />} />
