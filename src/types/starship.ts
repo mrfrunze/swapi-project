@@ -15,6 +15,6 @@ export interface Starship extends BaseResource {
   MGLT: string;
   starship_class: string;
 
-  pilots: string[];
-  films: string[];
+  pilots: Array<{ id: number; name: string }>;
+  films: Array<{ id: number; title: string }>;
 }

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getById } from "../services/swapi.service";
 import type { Planet } from "../types/planet";
@@ -35,6 +35,28 @@ export function PlanetDetailPage() {
             <h1 className="text-xl font-bold">{planet.name}</h1>
             {planet.climate && <div>Climate: {planet.climate}</div>}
             {planet.population && <div>Population: {planet.population}</div>}
+
+            <div>
+                <h3>Residents</h3>
+                <ul>
+                    {planet.residents.map((p) => (
+                        <li key={p.id}>
+                            <Link to={`/people/${p.id}`}>{p.name}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <div>
+                <h3>Films</h3>
+                <ul>
+                    {planet.films.map((f) => (
+                        <li key={f.id}>
+                            <Link to={`/films/${f.id}`}>{f.title}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 

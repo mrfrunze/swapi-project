@@ -9,3 +9,19 @@ GET https://swapi.thehiveresistance.com/api/films/1
 
 ### Person detail
 GET https://swapi.thehiveresistance.com/api/people/1
+
+
+### Film detail
+GET https://swapi.thehiveresistance.com/api/films/1
+
+### Planet detail
+GET https://swapi.thehiveresistance.com/api/planets/1
+
+### Species detail
+GET https://swapi.thehiveresistance.com/api/species/1
+
+### Starship detail
+GET https://swapi.thehiveresistance.com/api/starships/9
+
+### Vehicle detail
+GET https://swapi.thehiveresistance.com/api/vehicles/4

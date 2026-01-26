@@ -13,6 +13,6 @@ export interface Vehicle extends BaseResource {
   consumables: string;
   vehicle_class: string;
 
-  pilots: string[];
-  films: string[];
+  pilots: Array<{ id: number; name: string }>;
+  films: Array<{ id: number; title: string }>;
 }

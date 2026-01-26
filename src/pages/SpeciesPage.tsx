@@ -1,20 +1,12 @@
-import { Link } from "react-router-dom";
 import { ResourceListPage } from "./ResourceListPage";
 import type { Species } from "../types/species";
+import { ResourceCard } from "../components/ResourceCard";
 
 export function SpeciesPage() {
   return (
     <ResourceListPage<Species>
       resource="species"
-      renderItem={(specie) => (
-        <Link
-          key={specie.id}
-          to={`/species/${specie.id}`}
-          className="border p-3 rounded block hover:bg-gray-50"
-        >
-          {specie.name}
-        </Link>
-      )}
+      renderItem={(s) => <ResourceCard key={s.id} resource="species" item={s} />}
     />
   );
 }

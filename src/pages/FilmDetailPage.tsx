@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getById } from "../services/swapi.service";
 import type { Film } from "../types/film";
@@ -35,6 +35,61 @@ export function FilmDetailPage() {
             <h1 className="text-xl font-bold">{film.title}</h1>
             {film.release_date && <div>Release: {film.release_date}</div>}
             {film.opening_crawl && <p className="whitespace-pre-line">{film.opening_crawl}</p>}
+
+            <div>
+                <h3>Characters</h3>
+                <ul>
+                    {film.characters.map((p) => (
+                        <li key={p.id}>
+                            <Link to={`/people/${p.id}`}>{p.name}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <div>
+                <h3>Planets</h3>
+                <ul>
+                    {film.planets.map((p) => (
+                        <li key={p.id}>
+                            <Link to={`/planets/${p.id}`}>{p.name}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <div>
+                <h3>Starships</h3>
+                <ul>
+                    {film.starships.map((s) => (
+                        <li key={s.id}>
+                            <Link to={`/starships/${s.id}`}>{s.name}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <div>
+                <h3>Vehicles</h3>
+                <ul>
+                    {film.vehicles.map((v) => (
+                        <li key={v.id}>
+                            <Link to={`/vehicles/${v.id}`}>{v.name}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <div>
+                <h3>Species</h3>
+                <ul>
+                    {film.species.map((s) => (
+                        <li key={s.id}>
+                            <Link to={`/species/${s.id}`}>{s.name}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 

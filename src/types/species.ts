@@ -10,8 +10,8 @@ export interface Species extends BaseResource {
   hair_colors: string;
   skin_colors: string;
   language: string;
-  homeworld: string;
 
-  people: string[];
-  films: string[];
+  people: Array<{ id: number; name: string }>;
+  homeworld: { id: number; name: string } | null;
+  films: Array<{ id: number; title: string }>;
 }

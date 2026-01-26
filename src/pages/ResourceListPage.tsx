@@ -22,6 +22,7 @@ export function ResourceListPage<T>({ resource, renderItem }: Props<T>) {
     const [loading, setLoading] = useState(false);
     const [inputValue, setInputValue] = useState(query);
     const [hasNext, setHasNext] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         setInputValue(query);
@@ -37,6 +38,9 @@ export function ResourceListPage<T>({ resource, renderItem }: Props<T>) {
                 setItems(res.results);
                 setCount(res.count);
                 setHasNext(Boolean(res.next));
+            } catch (error) {
+                if (!active) return;
+                setError(error instanceof Error ? error.message : "Error");
             } finally {
                 if (active) setLoading(false);
             }
@@ -48,9 +52,6 @@ export function ResourceListPage<T>({ resource, renderItem }: Props<T>) {
             active = false;
         };
     }, [resource, page, query]);
-
-
-    
 
     return (
         <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-4">
@@ -99,33 +100,40 @@ export function ResourceListPage<T>({ resource, renderItem }: Props<T>) {
                         <FiSearch />
                     </button>
                 </form>
-
             </div>
+
+            {error && (
+                <div className="p-4 text-red-600 border border-red-200 rounded">
+                    {error}
+                </div>
+            )}
             {!loading && items.length === 0 && (
                 <div className="text-center text-gray-500 py-10">
                     No results
                 </div>
             )}
 
-            <div className="grid gap-3">{items.map(renderItem)}</div>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">{items.map(renderItem)}</div>
             {count > items.length && (
-                <div className="flex gap-2 items-center">
+                <div className="mt-6 flex items-center justify-between">
                     <button
-                        className="cursor-pointer"
+                        className="px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50 cursor-pointer"
                         disabled={page <= 1}
                         onClick={() => setParams({ query, page: String(page - 1) })}
                     >
                         <FiChevronLeft size={18} />
                     </button>
-                    <span className="text-sm">Page {page}</span>
+                    <span className="text-sm text-gray-600">
+                        Page {page} / {Math.ceil(count / 10)}
+                    </span>
                     <button
-                        className="cursor-pointer"
+                        className="px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50 cursor-pointer"
                         disabled={!hasNext}
                         onClick={() => setParams({ query, page: String(page + 1) })}
                     >
                         <FiChevronRight size={18} />
                     </button>
-                    <span>Total: {count}</span>
+
                 </div>
             )}
 

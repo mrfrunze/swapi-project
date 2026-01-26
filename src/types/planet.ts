@@ -11,6 +11,6 @@ export interface Planet extends BaseResource {
   terrain: string;
   surface_water: string;
 
-  residents: string[];
-  films: string[];
+  residents: Array<{ id: number; name: string }>;
+  films: Array<{ id: number; title: string }>;
 }

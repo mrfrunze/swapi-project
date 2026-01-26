@@ -7,10 +7,12 @@ export interface Film extends BaseResource {
   director: string;
   producer: string;
   release_date: string;
+  image_url?: string;
+  characters_count?: number;
 
-  characters: string[];
-  planets: string[];
-  species: string[];
-  starships: string[];
-  vehicles: string[];
+  characters: Array<{ id: number; name: string }>;
+  planets: Array<{ id: number; name: string }>;
+  starships: Array<{ id: number; name: string }>;
+  vehicles: Array<{ id: number; name: string }>;
+  species: Array<{ id: number; name: string }>;
 }

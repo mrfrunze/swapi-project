@@ -1,20 +1,12 @@
-import { Link } from "react-router-dom";
 import { ResourceListPage } from "./ResourceListPage";
 import type { Starship } from "../types/starship";
+import { ResourceCard } from "../components/ResourceCard";
 
 export function StarshipsPage() {
   return (
     <ResourceListPage<Starship>
       resource="starships"
-      renderItem={(star) => (
-        <Link
-          key={star.id}
-          to={`/starships/${star.id}`}
-          className="border p-3 rounded block hover:bg-gray-50"
-        >
-          {star.name}
-        </Link>
-      )}
+      renderItem={(s) => <ResourceCard key={s.id} resource="starships" item={s} />}
     />
   );
 }
